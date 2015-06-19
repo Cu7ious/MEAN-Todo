@@ -1,5 +1,5 @@
 {
-  "name": "ToDo App",
+  "name": "MEAN-ToDo ",
   "version": "0.0.3",
   "description": "",
   "main": "app.js",
@@ -11,7 +11,9 @@
   "dependencies": {
     "body-parser": "^1.4.3",
     "express": "^4.6.1",
-    "mongoose": "^3.8.13",
-    "morgan": "^1.1.1"
+    "mongoose": "^3.8.13"
+  },
+  "devDependencies": {
+    "morgan": "^1.6.0"
   }
 }
