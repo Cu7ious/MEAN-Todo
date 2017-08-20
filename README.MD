@@ -3,7 +3,7 @@
 The old code for Scotch.io tutorial.
 
 <div align="center">
-  <img src="https://github.com/Cu7ious//raw/master/public/images/MEAN-Todo-App.png" alt="MEAN stack TO-DO App" />
+  <img src="https://github.com/Cu7ious/MEAN-Todo/raw/master/public/images/MEAN-Todo-App.png" alt="MEAN stack TO-DO App" />
 </div>
 
 ## Libraries
