@@ -1,7 +1,6 @@
-var mongoose = require('mongoose');
+var mongoose = require('mongoose')
 
 // define a ToDo model
-var Todo = mongoose.model('Todo', {text : String});
+var Todo = mongoose.model('Todo', {text: String})
 
-module.exports = Todo;
-
+module.exports = Todo

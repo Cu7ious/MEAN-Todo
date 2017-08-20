@@ -1,20 +1,29 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var morgan  = require('morgan')
-var router = require('./router');
-var app = express();
+var express = require('express')
+var bodyParser = require('body-parser')
+var mongoose = require('mongoose')
+var morgan = require('morgan')
+var router = require('./router')
+var app = express()
 
 // connect to MongoDB
-mongoose.connect('mongodb://localhost/angularTODO');
+mongoose.connect('mongodb://localhost/angularTODO')
 
-app.use(express.static('public'));
-app.use(morgan());
-app.use(bodyParser.json());
+app.use(express.static('public'))
+app.use(bodyParser.json())
 
-app.use('/api/todos', router);
+if (process.env.NODE_ENV !== 'test') {
+  app.use(morgan())
+}
 
-app.listen(8080);
+app.route('/')
+  .get(function (req, res) {
+    res.status(200).send()
+  })
 
-console.log("App listening on port 8080");
+app.use('/api/todos', router)
 
+app.listen(8080)
+
+console.log('App listening on port 8080')
+
+module.exports = app
